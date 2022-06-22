@@ -104,10 +104,10 @@ contract VotingApp {
      * @return Results - winner by how many votes
      */
     function showMeWinner() public view returns (string memory Results) {
-        require(
-            block.timestamp >= endTime,
-            "Winner will be announce after Voting Ends"
-        );
+        // require(
+        //     block.timestamp >= endTime,
+        //     "Winner will be announce after Voting Ends"
+        // );
         if (voteForTrump == voteForBiden)
             return ("Election tie between Trump and Biden.");
         else if (voteForTrump > voteForBiden)
